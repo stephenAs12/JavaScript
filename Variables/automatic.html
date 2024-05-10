@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this number comes from automatic variable </h1> <h1 id="num_id">number</h1>
+    <h1>this text comes from automatic variable </h1> <h1 id="text_id">text</h1>
+
+    <script>
+        x=34;
+        document.getElementById("num_id").innerHTML = x;
+        console.log(x + " is " + typeof(x)) //at this time x is a Number u can see on the console
+
+        x="this is text";
+        document.getElementById("text_id").innerHTML = x;
+        console.log(x + " is " + typeof(x));
+
+    </script>
+</body>
+</html>
