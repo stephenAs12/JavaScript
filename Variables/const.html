@@ -8,15 +8,15 @@
 </head>
 
 <body>
-    <h1>this number comes from automatic variable </h1>
+    <h1>this number comes from const </h1>
     <code id="num_id">number</code>
-    <h1>this text comes from automatic variable </h1>
+    <h1>this text comes from const </h1>
     <code id="text_id">text</code>
     <button type="button" onclick="calculate()">Show</button>
 
     <script>
         function calculate() {
-            x = 34;
+            const x = 34;
             document.getElementById("num_id").innerHTML = x;
             console.log(x + " is " + typeof (x)) //at this time x is a Number u can see on the console
 
@@ -25,8 +25,7 @@
             console.log(x + " is " + typeof (x));
         }
 
-        console.log(x);  //this line of code shows error on your console
-
+        // error was fixed but the number only display on a browser and shows an error on your console b/c we can not change the value of x
     </script>
 </body>
 

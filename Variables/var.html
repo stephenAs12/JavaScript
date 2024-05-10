@@ -8,24 +8,24 @@
 </head>
 
 <body>
-    <h1>this number comes from automatic variable </h1>
+    <h1>this number comes from var </h1>
     <code id="num_id">number</code>
-    <h1>this text comes from automatic variable </h1>
+    <h1>this text comes from var </h1>
     <code id="text_id">text</code>
     <button type="button" onclick="calculate()">Show</button>
 
     <script>
         function calculate() {
-            x = 34;
+            var x = 34;
             document.getElementById("num_id").innerHTML = x;
             console.log(x + " is " + typeof (x)) //at this time x is a Number u can see on the console
 
-            x = "this is text";
+            var x = "this is text";
             document.getElementById("text_id").innerHTML = x;
             console.log(x + " is " + typeof (x));
         }
 
-        console.log(x);  //this line of code shows error on your console
+        // when we use var we can redeclare it
 
     </script>
 </body>
