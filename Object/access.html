@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="name">Name</h1>
+    <h1 id="age">Age</h1>
+    <h1 id="bt">Blood Type</h1>
+    <h1 id="nation">Nationality</h1>
+
+    <p id="all">All</p>
+
+    <script>
+        const person = {
+            name: "Alex",
+            age: 26,
+            blood_type: "B",
+            nation: "American",
+
+            findName: function () {
+                return "Your Name is :- " + this.name
+            },
+
+            findAll: function () {
+                return "Your Name is :- " + this.name + " Your Age is :- " + this.age + " Your Blood Type is :- " + this.blood_type + " Your Nationality is :- " + this.nation
+            },
+
+            acceptAge : function(newAge){
+                this.age =newAge;
+                return "This is your new age :- " + this.age;
+            }
+        }
+
+       
+
+        document.getElementById("name").innerHTML = person.name;
+        document.getElementById("age").innerHTML = person.acceptAge(100);
+
+        let x = person;
+        x.age =29;
+        document.getElementById("all").innerHTML = person.findAll();
+
+        
+
+    </script>;
+</body>
+
+</html>
